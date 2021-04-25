@@ -1,8 +1,8 @@
 
 # Getting Started with Create React App
-### Arin Software React tutorial 
+###  [Arin Software React tutorial](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://www.youtube.com/playlist?list=PL-Hkw4CrSVq_eyixSZ4sVI1x6d7akLpsy).
 
 ## Available Scripts
 
