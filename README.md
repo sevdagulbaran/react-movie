@@ -1,4 +1,4 @@
-### Arin Software React tutorial 
+
 # Getting Started with Create React App
 
 
