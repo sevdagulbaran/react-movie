@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link}  from "react-router-dom";
 
 class SearchBar extends React.Component{
 
@@ -25,10 +25,12 @@ class SearchBar extends React.Component{
                             placeholder="Seach a movie" />
                     </div>
                     <div className="col-2">
-                        <button type="button"
+                        <Link
+                                to="/add"
+                                type="button"
                                 className="btn btn-md btn-danger"
                                 style={{float:'right'}}> Add Movie
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </form>

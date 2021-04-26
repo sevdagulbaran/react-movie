@@ -21,7 +21,7 @@ import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
 
     }
 
-    //axios
+    //axios delete
     deleteMovie = async (movie) => {
         axios.delete(`http://localhost:3002/movies/${movie.id}`)
 
@@ -34,6 +34,15 @@ import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
         }))
     }
 
+    // ADD MOVIE
+    addMovie = async (movie) => {
+        await axios.post(`http://localhost:3002/movies/`, movie)
+        this.setState( state => ( {//güncelleyeceğiz
+            movies:state.movies.concat([movie])// arr olduğu için concat kullandık
+        }))
+    }
+
+    //SEARCH MOVİE
     searchMovie = (event) => {
         this.setState({searchQuery: event.target.value })
     }
@@ -67,8 +76,17 @@ import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
                                 </React.Fragment>
                             )}>
                             </Route>
+                            <Route path="/add"  render={({history}) => (
+                                <AddMovie
+                                onAddMovie = {(movie) => {this.addMovie(movie)
 
-                            <Route path="/add" component={AddMovie} />
+                                     history.push("/");
+                                }
+                            }
+                                />
+                            )}>
+                            </Route>
+
 
 
                         </Switch>

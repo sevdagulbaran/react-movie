@@ -34,15 +34,20 @@
       "rating": 6.7,
       "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
       "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/TnOeov4w0sTtV2gqICqIxVi74V.jpg"
-  },
-
-  {
+    },
+    {
       "id": 6,
       "name": "Superman",
       "rating": 7.6,
       "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
       "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/6Bbq8qQWpoApLZYWFFAuZ1r2gFw.jpg"
-  }
-
+    },
+    {
+      "name": "Forrest Gump",
+      "rating": "8.7",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/h5J4W4veyxMXDMjeNxZI46TsHOb.jpg",
+      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "id": 7
+    }
   ]
 }

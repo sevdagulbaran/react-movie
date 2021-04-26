@@ -1,12 +1,21 @@
 import React from 'react';
+import serialize from 'form-serialize';
 
 class AddMovie extends React.Component {
+
+  handleFormSubmit = (e) => {
+        e.preventDefault();//refresh engellemek için kullanıyoruz
+        const newMovie = serialize(e.target, { hash: true });//target içerisinden alıyoruz
+        // console.log(newMovie);
+        this.props.onAddMovie(newMovie);// json dosyamıza göndermek için app.jse props ekliyoruz
+  }
+
 
     render() {
 
         return  (
             <div className="container">
-            <form className="my-5">
+            <form className="my-5" onSubmit = {this.handleFormSubmit}>
             <input className="form-control" id="disabledInput" type="text" placeholder="Fill The Form To Add A Movie.." disabled/>
                 <div className="form-row">
                     <div className="form-group col-md-10">
