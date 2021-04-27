@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 import AddMovie from './AddMovie';
+import EditMovie from './EditMovie';
 import axios from 'axios';
 import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
 
@@ -53,7 +54,10 @@ import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
                 console.log(this.state.searchQuery);
                 return movie.name.toLowerCase().indexOf(this.state.searchQuery.toLowerCase()) !== -1
             }
-        )
+        ).sort((a,b) => {
+            return a.id < b.id ? 1 : a.id > b.id ? -1 : 0;//son gelen datayı yazdırmak için byük ise 1 al
+
+        });
 
         return (
                 <Router>
@@ -86,9 +90,7 @@ import {BrowserRouter as Router,Switch,Route } from "react-router-dom";
                                 />
                             )}>
                             </Route>
-
-
-
+                            <Route path="/edit/:id" component={EditMovie} />
                         </Switch>
                     </div>
 
